@@ -6,11 +6,11 @@ using Code2Xml.Languages.C.CodeToXmls;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using Unicoen.Languages.C.ProgramGenerators;
-using Unicoen.Languages.CSharp.ProgramGenerators;
 using Unicoen.Languages.Java.ProgramGenerators;
 using Unicoen.Languages.JavaScript.ProgramGenerators;
 using Unicoen.Languages.Python2.ProgramGenerators;
 using Unicoen.Model;
+using Unicoen;
 
 namespace UniAspect.Processor {
 	public class UcoGenerator {
@@ -76,7 +76,7 @@ namespace UniAspect.Processor {
 			// 1つのメソッドを持つクラスとして統合コードオブジェクトを生成するために、
 			// そのメソッドが、与えられたコード断片を内部持つようにコードを補完します
 			code = "public class C { public int M() {" + code + "}}";
-			var gen = new CSharpProgramGenerator();
+			var gen = UnifiedGenerators.GetProgramGeneratorByExtension(".cs");
 			var model = gen.Generate(code);
 			var block = model.Descendants<UnifiedFunctionDefinition>().First().Body;
 			return block;

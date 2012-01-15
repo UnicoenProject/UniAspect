@@ -17,7 +17,7 @@ namespace UniAspect.Tests.CodeProcessorTest {
 	public class SetWeavingTest {
 		//指定されたパスのファイルを読み込んで共通コードオブジェクトに変換します
 		public UnifiedProgram CreateProgramFromCode(string extension, string code) {
-			var gen = UniGenerators.GetProgramGeneratorByExtension(extension);
+			var gen = UnifiedGenerators.GetProgramGeneratorByExtension(extension);
 			return gen.Generate(code);
 		}
 
