@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniAspect", "UniAspect\UniAspect.csproj", "{5EEF1080-59C6-4E05-A189-B2A0F4CC06FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniAspect.Tests", "UniAspect.Tests\UniAspect.Tests.csproj", "{F471DD1D-F461-406F-B0A9-287CDB58E9FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{5EEF1080-59C6-4E05-A189-B2A0F4CC06FD}.Debug|x86.Build.0 = Debug|x86
 		{5EEF1080-59C6-4E05-A189-B2A0F4CC06FD}.Release|x86.ActiveCfg = Release|x86
 		{5EEF1080-59C6-4E05-A189-B2A0F4CC06FD}.Release|x86.Build.0 = Release|x86
+		{F471DD1D-F461-406F-B0A9-287CDB58E9FD}.Debug|x86.ActiveCfg = Debug|x86
+		{F471DD1D-F461-406F-B0A9-287CDB58E9FD}.Debug|x86.Build.0 = Debug|x86
+		{F471DD1D-F461-406F-B0A9-287CDB58E9FD}.Release|x86.ActiveCfg = Release|x86
+		{F471DD1D-F461-406F-B0A9-287CDB58E9FD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

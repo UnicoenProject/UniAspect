@@ -1,0 +1,5 @@
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.Tests.exe
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.Tests.pdb
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\obj\x86\Debug\UniAspect.Tests.exe
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\obj\x86\Debug\UniAspect.Tests.pdb

@@ -8,9 +8,62 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/f:Program.cs" caret="188" fromTop="14" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:Program.cs" caret="194" fromTop="14" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectCompiler/f:UniAspectParser.cs" caret="313" fromTop="10" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/f:Program.cs" caret="0" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectElement/f:IAspectElement.cs" caret="0" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectElement/f:Pointcut.cs" caret="72" fromTop="3" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectElement/f:LanguageDependBlock.cs" caret="10" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectElement/f:Intertype.cs" caret="27" fromTop="2" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectElement/f:Advice.cs" caret="508" fromTop="18" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/f:UcoGenerator.cs" caret="522" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:CodeProcessor.cs" caret="32" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/f:CodeProcessorProvider.cs" caret="206" fromTop="6" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Execution.cs" caret="3793" fromTop="31" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Call.cs" caret="196" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Get.cs" caret="191" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Set.cs" caret="191" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Exception.cs" caret="94" fromTop="3" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:InterType.cs" caret="137" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:DebugVisitor.cs" caret="63" fromTop="3" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:FixtureUtil.cs" caret="3282" fromTop="90" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/f:Weaver.cs" caret="1028" fromTop="38" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:AspectCompiler/f:UniAspectLexer.cs" caret="0" fromTop="0" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:AstVisitor.cs" caret="138" fromTop="5" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="218" fromTop="9" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/f:CodeProcessorProvider.cs" caret="2006" fromTop="43" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:CodeProcessor.cs" caret="396" fromTop="11" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:CodeProcessor.cs" caret="32" fromTop="2" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/f:CodeProcessorProvider.cs" caret="206" fromTop="6" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Execution.cs" caret="10686" fromTop="307" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Execution.cs" caret="187" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Call.cs" caret="4376" fromTop="132" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Call.cs" caret="196" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Get.cs" caret="4390" fromTop="141" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Get.cs" caret="191" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Set.cs" caret="4123" fromTop="138" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Set.cs" caret="191" fromTop="7" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Exception.cs" caret="1024" fromTop="37" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:Exception.cs" caret="94" fromTop="3" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:InterType.cs" caret="1592" fromTop="43" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Processor/d:Pointcut/f:InterType.cs" caret="137" fromTop="5" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:AstVisitor.cs" caret="4645" fromTop="43" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:AstVisitor.cs" caret="109" fromTop="4" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:DebugVisitor.cs" caret="8212" fromTop="43" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/d:Visitor/f:DebugVisitor.cs" caret="63" fromTop="3" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/f:Weaver.cs" caret="437" fromTop="0" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:FixtureUtil.cs" caret="3287" fromTop="91" />
+      <File id="5EEF1080-59C6-4E05-A189-B2A0F4CC06FD/f:Weaver.cs" caret="1177" fromTop="38" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="7655" fromTop="46" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="13" fromTop="0" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="628" fromTop="15" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="1528" fromTop="42" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="852" fromTop="0" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="335" fromTop="16" />
+      <File id="F471DD1D-F461-406F-B0A9-287CDB58E9FD/f:AspectAdaptorTest.cs" caret="218" fromTop="9" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -23,4 +76,10 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="using" priority="1" />
+      <Item value="UniAspect" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

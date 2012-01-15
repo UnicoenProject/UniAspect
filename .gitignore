@@ -1,2 +1,6 @@
 
 /_ReSharper.UniAspect
+/UniAspect/bin
+/UniAspect/ParserScripts
+/UniAspect.Tests/ParserScripts
+/UniAspect.Tests/bin

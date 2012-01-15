@@ -34,17 +34,151 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Core">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.C">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.C.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.CSharp">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.Java">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Java.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.JavaScript">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.Lua">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Lua.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.Python2">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Python2.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.Python3">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Python3.dll</HintPath>
+    </Reference>
+    <Reference Include="Code2Xml.Languages.Ruby18">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Ruby18.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\IronRuby.Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries.Yaml">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\IronRuby.Libraries.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba">
+      <HintPath>..\packages\Paraiba.1.0.0.10\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba.Experiment">
+      <HintPath>..\packages\Paraiba.Experiment.1.0.0.11\lib\net40\Paraiba.Experiment.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unicoen.Core">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.C">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.C.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.CSharp">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.Java">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.Java.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.JavaScript">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.Python2">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.Python2.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.Python3">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.Python3.dll</HintPath>
+    </Reference>
+    <Reference Include="Unicoen.Languages.Ruby18">
+      <HintPath>..\packages\UNICOEN.1.0.0.26\lib\Unicoen.Languages.Ruby18.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspectCompiler\UniAspectLexer.cs" />
+    <Compile Include="AspectCompiler\UniAspectParser.cs" />
+    <Compile Include="AspectElement\Advice.cs" />
+    <Compile Include="AspectElement\IAspectElement.cs" />
+    <Compile Include="AspectElement\Intertype.cs" />
+    <Compile Include="AspectElement\LanguageDependBlock.cs" />
+    <Compile Include="AspectElement\Pointcut.cs" />
+    <Compile Include="Processor\CodeProcessorProvider.cs" />
+    <Compile Include="Processor\Pointcut\Call.cs" />
+    <Compile Include="Processor\Pointcut\CodeProcessor.cs" />
+    <Compile Include="Processor\Pointcut\Exception.cs" />
+    <Compile Include="Processor\Pointcut\Execution.cs" />
+    <Compile Include="Processor\Pointcut\Get.cs" />
+    <Compile Include="Processor\Pointcut\InterType.cs" />
+    <Compile Include="Processor\Pointcut\Set.cs" />
+    <Compile Include="Processor\UcoGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visitor\AstVisitor.cs" />
+    <Compile Include="Visitor\DebugVisitor.cs" />
+    <Compile Include="Weaver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ParserScripts\IronRubyParser\ruby2ruby_README.txt" />
+    <Content Include="ParserScripts\IronRubyParser\ruby_parser_README.txt" />
+    <Content Include="ParserScripts\IronRubyParser\SexpProcessor_README.txt" />
+    <Content Include="ParserScripts\Python2\ast2xml.py" />
+    <Content Include="ParserScripts\Python3\st2xml.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AspectCompiler\UniAspect.g" />
+    <None Include="AspectCompiler\UniAspect.tokens" />
+    <None Include="packages.config" />
+    <None Include="ParserScripts\IronRubyParser\composite_sexp_processor.rb" />
+    <None Include="ParserScripts\IronRubyParser\gauntlet_rubyparser.rb" />
+    <None Include="ParserScripts\IronRubyParser\parser.rb" />
+    <None Include="ParserScripts\IronRubyParser\racc\parser.rb" />
+    <None Include="ParserScripts\IronRubyParser\ruby2ruby.rb" />
+    <None Include="ParserScripts\IronRubyParser\ruby_lexer.rb" />
+    <None Include="ParserScripts\IronRubyParser\ruby_parser.rb" />
+    <None Include="ParserScripts\IronRubyParser\ruby_parser_extras.rb" />
+    <None Include="ParserScripts\IronRubyParser\sexp.rb" />
+    <None Include="ParserScripts\IronRubyParser\sexp_processor.rb" />
+    <None Include="ParserScripts\IronRubyParser\sjis.rb" />
+    <None Include="ParserScripts\IronRubyParser\stringio.rb" />
+    <None Include="ParserScripts\IronRubyParser\strscan.rb" />
+    <None Include="ParserScripts\IronRubyParser\unique.rb" />
+    <None Include="ParserScripts\IronRubyParser\zkcount_08a2.rb" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UniAspect.Tests\UniAspect.Tests.csproj">
+      <Project>{F471DD1D-F461-406F-B0A9-287CDB58E9FD}</Project>
+      <Name>UniAspect.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
