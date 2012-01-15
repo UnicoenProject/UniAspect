@@ -3,6 +3,7 @@ using System.Linq;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using NUnit.Framework;
+using UniAspect.Visitor;
 using Unicoen;
 using Unicoen.Languages.Java.CodeGenerators;
 using Unicoen.Model;

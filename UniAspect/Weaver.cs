@@ -7,7 +7,6 @@ using Antlr.Runtime.Tree;
 using UniAspect.AspectElement;
 using UniAspect.Processor;
 using UniAspect.Processor.Pointcut;
-using UniAspect.Tests;
 using UniAspect.Visitor;
 using Unicoen;
 using Unicoen.Model;

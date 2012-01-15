@@ -132,6 +132,7 @@
     <Compile Include="AspectElement\Intertype.cs" />
     <Compile Include="AspectElement\LanguageDependBlock.cs" />
     <Compile Include="AspectElement\Pointcut.cs" />
+    <Compile Include="FixtureUtil.cs" />
     <Compile Include="Processor\CodeProcessorProvider.cs" />
     <Compile Include="Processor\Pointcut\Call.cs" />
     <Compile Include="Processor\Pointcut\CodeProcessor.cs" />
@@ -175,10 +176,7 @@
     <None Include="ParserScripts\IronRubyParser\zkcount_08a2.rb" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UniAspect.Tests\UniAspect.Tests.csproj">
-      <Project>{F471DD1D-F461-406F-B0A9-287CDB58E9FD}</Project>
-      <Name>UniAspect.Tests</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

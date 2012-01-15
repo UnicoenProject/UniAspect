@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
 
-namespace UniAspect.Tests {
+namespace UniAspect {
 	public static class FixtureUtil {
 		public static string RootPath = Path.Combine("..", "..");
 		public static string FixturePath = Path.Combine(RootPath, "fixture");
