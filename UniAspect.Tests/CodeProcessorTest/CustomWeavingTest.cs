@@ -21,9 +21,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 //		[TestCase("CSharp", ".cs", "Console.WriteLine(\"Inserted before.\");")]
 //		[TestCase("Python", ".py", "print \"Inserted before.\"")]
 		public void ExceptionBeforeが正しく動作することを検証します(string language, string ext, string code) {
-			var model = UniGenerators.GenerateProgramFromFile(
+			var model = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Exception", "Fibonacci" + ext));
-			var actual = UniGenerators.GenerateProgramFromFile(
+			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Exception", "Fibonacci_expectation_before" + ext));
 
 			CodeProcessorProvider.WeavingBefore("exception", model, "fibonacci",
@@ -35,8 +35,8 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[Test]
 		public void 例外ポイントカットを作成してcatch節の中にコードを追加する() {
 			// オリジナルのソースコードのUCOとアスペクト合成後に期待されるソースコードのUCOを生成する
-			var model = UniGenerators.GenerateProgramFromFile(_sourcePath);
-			var actual = UniGenerators.GenerateProgramFromFile(_expectationSourcePath);
+			var model = UnifiedGenerators.GenerateProgramFromFile(_sourcePath);
+			var actual = UnifiedGenerators.GenerateProgramFromFile(_expectationSourcePath);
 
 			// オリジナルのUCOに対して、アスペクトを合成する
 			CodeProcessorProvider.WeavingBefore("exception", model, "Exception", 
@@ -44,7 +44,7 @@ namespace UniAspect.Tests.CodeProcessorTest {
 
 			model.Normalize();
 
-			var gen = UniGenerators.GetCodeGeneratorByExtension(".java");
+			var gen = UnifiedGenerators.GetCodeGeneratorByExtension(".java");
 			Console.WriteLine(gen.Generate(model));
 			Console.WriteLine(gen.Generate(actual));
 

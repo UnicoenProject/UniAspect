@@ -34,12 +34,12 @@ namespace UniAspect.Tests {
 		[SetUp]
 		public void Setup() {
 			//Java言語のモデルを作成
-			_javaModel = UniGenerators.GenerateProgramFromFile(JavaCodePath);
+			_javaModel = UnifiedGenerators.GenerateProgramFromFile(JavaCodePath);
 			_amountOfBlockInJava =
 					_javaModel.Descendants<UnifiedBlock>().Count();
 
 			//JavaScript言語のモデルを作成
-			_javaScriptModel = UniGenerators.GenerateProgramFromFile(JavaScriptCodePath);
+			_javaScriptModel = UnifiedGenerators.GenerateProgramFromFile(JavaScriptCodePath);
 			_amountOfBlockInJavaScript =
 					_javaScriptModel.Descendants<UnifiedBlock>().Count();
 		}
@@ -76,7 +76,7 @@ namespace UniAspect.Tests {
 
 			//期待されるモデルの作成
 			var filePath = FixtureUtil.GetAspectExpectationPath(expectationFile);
-			var expectation = UniGenerators.GenerateProgramFromFile(filePath);
+			var expectation = UnifiedGenerators.GenerateProgramFromFile(filePath);
 
 			//for debug
 			var gen = new JavaCodeGenerator();
@@ -108,7 +108,7 @@ namespace UniAspect.Tests {
 
 			//期待されるモデルの作成
 			var filePath = FixtureUtil.GetAspectExpectationPath(expectationFile);
-			var expectation = UniGenerators.GenerateProgramFromFile(filePath);
+			var expectation = UnifiedGenerators.GenerateProgramFromFile(filePath);
 
 			//モデル内のブロック数が１増えているかどうか
 			Assert.That(
@@ -212,7 +212,7 @@ namespace UniAspect.Tests {
 
 			//期待されるモデルの作成
 			var filePath = FixtureUtil.GetAspectExpectationPath("intertype.java");
-			var expectation = UniGenerators.GenerateProgramFromFile(filePath);
+			var expectation = UnifiedGenerators.GenerateProgramFromFile(filePath);
 
 			var amountOfMethodInExpectation =
 					expectation.Descendants<UnifiedFunctionDefinition>().Count();
@@ -237,7 +237,7 @@ namespace UniAspect.Tests {
 
 			//期待されるモデルの作成
 			var filePath = FixtureUtil.GetAspectExpectationPath("intertype.js");
-			var expectation = UniGenerators.GenerateProgramFromFile(filePath);
+			var expectation = UnifiedGenerators.GenerateProgramFromFile(filePath);
 
 			var amountOfMethodInExpectation =
 					expectation.Descendants<UnifiedFunctionDefinition>().Count();

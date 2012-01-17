@@ -56,3 +56,6 @@ C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.J
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Python2.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Python3.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Ruby18.pdb
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.Tests.exe.config
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\ICSharpCode.NRefactory.VB.dll

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
@@ -33,9 +34,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[TestCase("CSharp", ".cs", "Console.WriteLine(\"Inserted before.\");")]
 //		[TestCase("Python", ".py", "print \"Inserted before.\"")]
 		public void ExecutionBeforeが正しく動作することを検証します(string language, string ext, string code) {
-			var model = UniGenerators.GenerateProgramFromFile(
+			var model = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci" + ext));
-			var actual = UniGenerators.GenerateProgramFromFile(
+			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci_expectation_before" + ext));
 	
 			CodeProcessorProvider.WeavingBefore("execution", model, "fibonacci", UcoGenerator.CreateAdvice(language, code));
@@ -50,9 +51,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[TestCase("CSharp", ".cs", "Console.WriteLine(\"Inserted after.\");")]
 //		[TestCase("Python", ".py", "print \"Inserted after.\"")]
 		public void ExecutionAfterが正しく動作することを検証します(string language, string ext, string code) {
-			var model = UniGenerators.GenerateProgramFromFile(
+			var model = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci" + ext));
-			var actual = UniGenerators.GenerateProgramFromFile(
+			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci_expectation_after" + ext));
 
 			CodeProcessorProvider.WeavingAfter("execution", model, "fibonacci", UcoGenerator.CreateAdvice(language, code));
@@ -65,10 +66,10 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[Test]
 		public void WeavingAtBeforeExecutionAll() {
 			//アスペクト合成処理対象のプログラムをモデル化する
-			var model = UniGenerators.GenerateProgramFromFile(_fibonacciPath);
+			var model = UnifiedGenerators.GenerateProgramFromFile(_fibonacciPath);
 			//あらかじめ用意されたアスペクト合成後の期待値であるプログラムをモデル化する
 			var actual =
-					UniGenerators.GenerateProgramFromFile(
+					UnifiedGenerators.GenerateProgramFromFile(
 							FixtureUtil.GetAopExpectationPath(
 									"Java", "Fibonacci_functionBefore.java"));
 
@@ -84,9 +85,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 
 		[Test]
 		public void WeavingAtAfterExecutionAll() {
-			var model = UniGenerators.GenerateProgramFromFile(_fibonacciPath);
+			var model = UnifiedGenerators.GenerateProgramFromFile(_fibonacciPath);
 			var actual =
-					UniGenerators.GenerateProgramFromFile(
+					UnifiedGenerators.GenerateProgramFromFile(
 							FixtureUtil.GetAopExpectationPath("Java", "Fibonacci_functionAfter.java"));
 
 			Execution.InsertAtAfterExecutionAll(
@@ -100,9 +101,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[Test]
 		[TestCase("^fib")]
 		public void WeavingAtBeforeExecutionByRegex(string regex) {
-			var model = UniGenerators.GenerateProgramFromFile(_fibonacciPath);
+			var model = UnifiedGenerators.GenerateProgramFromFile(_fibonacciPath);
 			var actual =
-					UniGenerators.GenerateProgramFromFile(
+					UnifiedGenerators.GenerateProgramFromFile(
 							FixtureUtil.GetAopExpectationPath(
 									"Java", "Fibonacci_functionBefore.java"));
 
@@ -118,9 +119,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 		[Test]
 		[TestCase("^fib")]
 		public void WeavingAtAfterExecutionByRegex(string regex) {
-			var model = UniGenerators.GenerateProgramFromFile(_fibonacciPath);
+			var model = UnifiedGenerators.GenerateProgramFromFile(_fibonacciPath);
 			var actual =
-					UniGenerators.GenerateProgramFromFile(
+					UnifiedGenerators.GenerateProgramFromFile(
 							FixtureUtil.GetAopExpectationPath("Java", "Fibonacci_functionAfter.java"));
 
 			Execution.InsertAtAfterExecution(

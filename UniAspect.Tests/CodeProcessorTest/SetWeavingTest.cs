@@ -30,9 +30,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 //		[TestCase("CSharp", ".cs", "Console.WriteLine(\"Inserted before.\");")]
 //		[TestCase("Python", ".py", "print \"Inserted before.\"")]
 		public void SetBeforeが正しく動作することを検証します(string language, string ext, string code) {
-			var model = UniGenerators.GenerateProgramFromFile(
+			var model = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Set", "Fibonacci" + ext));
-			var actual = UniGenerators.GenerateProgramFromFile(
+			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Set", "Fibonacci_expectation_before" + ext));
 
 			Set.InsertAtBeforeSetByName(
@@ -49,9 +49,9 @@ namespace UniAspect.Tests.CodeProcessorTest {
 //		[TestCase("CSharp", ".cs", "Console.WriteLine(\"Inserted after.\");")]
 //		[TestCase("Python", ".py", "print \"Inserted after.\"")]
 		public void SetAfterが正しく動作することを検証します(string language, string ext, string code) {
-			var model = UniGenerators.GenerateProgramFromFile(
+			var model = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Set", "Fibonacci" + ext));
-			var actual = UniGenerators.GenerateProgramFromFile(
+			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Set", "Fibonacci_expectation_after" + ext));
 
 			Set.InsertAtAfterSetByName(
