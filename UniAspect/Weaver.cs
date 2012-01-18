@@ -57,11 +57,17 @@ namespace UniAspect {
 				var newPath = file.Replace(directoryPath, workPath);
 
 				// 対象ファイルの統合コードオブジェクトを生成する
-				var model = UnifiedGenerators.GenerateProgramFromFile(file);
-				if (model == null) {
+				var gen = UnifiedGenerators.GetProgramGeneratorByExtension(Path.GetExtension(file));
+				if(gen == null) {
 					File.Copy(file, newPath);
 					continue;
 				}
+				var model = gen.GenerateFromFile(file);
+//				var model = UnifiedGenerators.GenerateProgramFromFile(file);
+//				if (model == null) {
+//					File.Copy(file, newPath);
+//					continue;
+//				}
 
 				//アスペクトの合成を行う
 				Weave(ExtenstionToLanguageName(Path.GetExtension(file)), model);

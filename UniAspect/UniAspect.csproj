@@ -64,13 +64,13 @@
     <Reference Include="Code2Xml.Languages.Ruby18, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Code2Xml.1.0.1.15\lib\Code2Xml.Languages.Ruby18.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
+    <Reference Include="ICSharpCode.NRefactory, Version=5.0.0.2, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory.CSharp">
+    <Reference Include="ICSharpCode.NRefactory.CSharp, Version=5.0.0.2, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\ICSharpCode.NRefactory.CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory.VB">
+    <Reference Include="ICSharpCode.NRefactory.VB, Version=5.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\ICSharpCode.NRefactory.VB.dll</HintPath>
     </Reference>
     <Reference Include="IronRuby, Version=1.1.3.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
@@ -88,11 +88,14 @@
     <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\Microsoft.Scripting.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Cecil">
+    <Reference Include="Mono.Cecil, Version=0.9.5.1, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Paraiba.1.0.0.10\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba.Experiment, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Paraiba.Experiment.1.0.0.11\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -108,7 +111,7 @@
     <Reference Include="Unicoen.Languages.C, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\Unicoen.Languages.C.dll</HintPath>
     </Reference>
-    <Reference Include="Unicoen.Languages.CSharp">
+    <Reference Include="Unicoen.Languages.CSharp, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UNICOEN.1.0.1.2\lib\Unicoen.Languages.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Unicoen.Languages.Java, Version=1.0.0.21, Culture=neutral, processorArchitecture=MSIL">
