@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
+using UniAspect.AspectElement;
 using UniAspect.Processor;
 using UniAspect.Processor.Pointcut;
 using Unicoen;
@@ -39,7 +40,11 @@ namespace UniAspect.Tests.CodeProcessorTest {
 			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci_expectation_before" + ext));
 	
-			CodeProcessorProvider.WeavingBefore("execution", model, "fibonacci", UcoGenerator.CreateAdvice(language, code));
+			var pointcut = new Pointcut();
+			pointcut.SetTarget("*");
+			pointcut.SetTarget("fibonacci");
+
+			CodeProcessorProvider.WeavingBefore("execution", model, pointcut, UcoGenerator.CreateAdvice(language, code));
 			Assert.That(model,
 					Is.EqualTo(actual).Using(StructuralEqualityComparer.Instance));
 		}
@@ -56,7 +61,11 @@ namespace UniAspect.Tests.CodeProcessorTest {
 			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Execution", "Fibonacci_expectation_after" + ext));
 
-			CodeProcessorProvider.WeavingAfter("execution", model, "fibonacci", UcoGenerator.CreateAdvice(language, code));
+			var pointcut = new Pointcut();
+			pointcut.SetTarget("*");
+			pointcut.SetTarget("fibonacci");
+
+			CodeProcessorProvider.WeavingAfter("execution", model, pointcut, UcoGenerator.CreateAdvice(language, code));
 			Assert.That(model,
 					Is.EqualTo(actual).Using(StructuralEqualityComparer.Instance));		
 		}

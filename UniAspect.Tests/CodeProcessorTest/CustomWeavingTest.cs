@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using UniAspect.AspectElement;
 using UniAspect.Processor;
 using Unicoen;
 using Unicoen.Processor;
@@ -26,7 +27,10 @@ namespace UniAspect.Tests.CodeProcessorTest {
 			var actual = UnifiedGenerators.GenerateProgramFromFile(
 				FixtureUtil.GetInputPath("Aspect", "Exception", "Fibonacci_expectation_before" + ext));
 
-			CodeProcessorProvider.WeavingBefore("exception", model, "fibonacci",
+			var pointcut = new Pointcut();
+			pointcut.SetTarget("*");
+			pointcut.SetTarget("fibonacci");
+			CodeProcessorProvider.WeavingBefore("exception", model, pointcut,
 			                                    UcoGenerator.CreateAdvice(language, code));
 			Assert.That(model,
 					Is.EqualTo(actual).Using(StructuralEqualityComparer.Instance));
@@ -38,8 +42,13 @@ namespace UniAspect.Tests.CodeProcessorTest {
 			var model = UnifiedGenerators.GenerateProgramFromFile(_sourcePath);
 			var actual = UnifiedGenerators.GenerateProgramFromFile(_expectationSourcePath);
 
+			var pointcut = new Pointcut();
+			pointcut.SetTarget("*");
+			pointcut.SetTarget("Exception");
+
+
 			// オリジナルのUCOに対して、アスペクトを合成する
-			CodeProcessorProvider.WeavingBefore("exception", model, "Exception", 
+			CodeProcessorProvider.WeavingBefore("exception", model, pointcut, 
 				UcoGenerator.CreateAdvice("Java", "System.out.println(\"test\");"));
 
 			model.Normalize();

@@ -141,10 +141,10 @@ namespace UniAspect {
 				switch (advice.GetAdviceType()) {
 				case "before":
 						Console.WriteLine(model);
-					CodeProcessorProvider.WeavingBefore(target.GetPointcutType(), model, methodName, code);
+					CodeProcessorProvider.WeavingBefore(target.GetPointcutType(), model, target.DeepCopy(), code);
 					break;
 				case "after":
-					CodeProcessorProvider.WeavingAfter(target.GetPointcutType(), model, methodName, code);
+					CodeProcessorProvider.WeavingAfter(target.GetPointcutType(), model, target.DeepCopy(), code);
 					break;
 				default:
 					throw new InvalidOperationException();

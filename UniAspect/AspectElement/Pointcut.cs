@@ -104,5 +104,18 @@ namespace UniAspect.AspectElement {
 		public List<string> GetTargetName() {
 			return _target;
 		}
+
+		// TODO テストを書く
+		public Pointcut DeepCopy() {
+			var copy = new Pointcut();
+			copy.SetElementType(GetPointcutType());
+			copy.SetName(GetName());
+			copy.SetType(GetTargetType());
+			// TODO パラメータもコピーする
+			foreach (var name in GetTargetName()) {
+				copy.SetTarget(name);
+			}
+			return copy;
+		}
 	}
 }

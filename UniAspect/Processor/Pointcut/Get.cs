@@ -126,12 +126,12 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "get"; }
 		}
 
-		public override void Before(IUnifiedElement model, string targetName, UnifiedBlock advice) {
-			InsertAtBeforeGetByName(model, targetName, advice);
+		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+			InsertAtBeforeGetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void After(IUnifiedElement model, string targetName, UnifiedBlock advice) {
-			InsertAtAfterGetByName(model, targetName, advice);
+		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+			InsertAtAfterGetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
 		public override void Around(IUnifiedElement model) {
