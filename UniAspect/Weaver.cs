@@ -39,9 +39,8 @@ namespace UniAspect {
 		// 実際の合成処理はWeave()メソッドが行います
 		public static void Run(string directoryPath) {
 			
-			// TODO FixtureUtilを内部に移植する
 			//指定されたパス以下にあるディレクトリをすべてoutput以下にコピーします
-			var workPath = FixtureUtil.CleanOutputAndGetOutputPath();
+			var workPath = CleanOutputAndGetOutputPath();
 			var directories = Directory.EnumerateDirectories(
 					directoryPath, "*", SearchOption.AllDirectories);
 			foreach (var dir in directories) {
@@ -63,11 +62,6 @@ namespace UniAspect {
 					continue;
 				}
 				var model = gen.GenerateFromFile(file);
-//				var model = UnifiedGenerators.GenerateProgramFromFile(file);
-//				if (model == null) {
-//					File.Copy(file, newPath);
-//					continue;
-//				}
 
 				//アスペクトの合成を行う
 				Weave(ExtenstionToLanguageName(Path.GetExtension(file)), model);
@@ -140,7 +134,6 @@ namespace UniAspect {
 				// リフレクション(MEF)を用いて、対応するメソッドが呼び出されます
 				switch (advice.GetAdviceType()) {
 				case "before":
-						Console.WriteLine(model);
 					CodeProcessorProvider.WeavingBefore(target.GetPointcutType(), model, target.DeepCopy(), code);
 					break;
 				case "after":
@@ -153,6 +146,24 @@ namespace UniAspect {
 		}
 
 		# region Utilities
+
+		public static string CleanOutputAndGetOutputPath() {
+			var path = Path.Combine(".", "output");
+			if (Directory.Exists(path)) {
+				var dirPaths = Directory.EnumerateDirectories(
+						path, "*", SearchOption.TopDirectoryOnly);
+				foreach (var dirPath in dirPaths) {
+					Directory.Delete(dirPath, true);
+				}
+				var filePaths = Directory.EnumerateFiles(
+						path, "*", SearchOption.TopDirectoryOnly);
+				foreach (var filePath in filePaths) {
+					File.Delete(filePath);
+				}
+			}
+			Directory.CreateDirectory(path);
+			return path.GetFullPathAddingSubNames();
+		}
 
 		// 指定されたフォルダ以下にあるファイルのパスのリストを返します
 		public static IEnumerable<string> Collect(string folderRootPath) {
