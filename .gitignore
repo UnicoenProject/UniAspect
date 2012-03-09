@@ -1,10 +1,10 @@
 
 /_ReSharper.UniAspect
-/UniAspect/bin
 /UniAspect/ParserScripts
 /UniAspect.Tests/ParserScripts
-/UniAspect.Tests/bin
-/UniAspect/obj
-/UniAspect.Tests/obj
-/UniAspect.Tests/obj
 /UniAspect/fixture
+
+*.suo
+*.swp
+bin/
+obj/

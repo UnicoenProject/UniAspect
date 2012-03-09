@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Unicoen;
 
 namespace UniAspect {
 	public class Program {
@@ -11,7 +13,6 @@ namespace UniAspect {
 		 *  :  args[1] -> アスペクトファイルのパス
 		 */
 		private static void Main(string[] args) {
-
 			// 引数が合わない場合はUsageを表示して終了する
 			if(args.Length != 2) {
 				Console.WriteLine(Usage);
