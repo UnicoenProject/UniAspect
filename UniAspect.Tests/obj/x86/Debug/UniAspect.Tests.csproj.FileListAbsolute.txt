@@ -27,6 +27,6 @@ C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.JavaScript.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.C.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Python2.dll
-C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Microsoft.Scripting.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Python2.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Python2.pdb
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Antlr3.Runtime.dll
