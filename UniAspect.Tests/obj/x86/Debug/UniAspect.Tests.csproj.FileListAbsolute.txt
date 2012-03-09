@@ -9,7 +9,6 @@ C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Paraiba.Experiment.
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.exe
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Antlr3.Runtime.pdb
-C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Core.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.C.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Java.pdb
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.JavaScript.pdb
@@ -22,7 +21,6 @@ C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.P
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\UniAspect.Tests.exe.config
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Core.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Java.dll
-C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Core.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Java.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.JavaScript.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.C.dll
@@ -30,3 +28,5 @@ C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.J
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.C.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Unicoen.Languages.Python2.dll
 C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Microsoft.Scripting.dll
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Python2.dll
+C:\Users\GreatAS\Project\UniAspect\UniAspect.Tests\bin\Debug\Code2Xml.Languages.Python2.pdb
