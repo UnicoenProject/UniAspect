@@ -1,12 +1,9 @@
 
 /_ReSharper.UniAspect
 /UniAspect/bin
-/UniAspect/ParserScripts
-/UniAspect.Tests/ParserScripts
-/UniAspect.Tests/bin
 /UniAspect/obj
+/UniAspect/ParserScripts
+/UniAspect.Tests/bin
 /UniAspect.Tests/obj
-/UniAspect.Tests/obj
+/UniAspect.Tests/ParserScripts
 /UniAspect/fixture
-/UniAspect.Tests/obj
-/UniAspect.Tests/obj
