@@ -9,7 +9,7 @@ namespace UniAspect.Processor.Pointcut {
 	[Export(typeof(CodeProcessor))]
 	public class Set : CodeProcessor{
 		//TODO a = b = cの扱いはどうするか考える
-		public static void InsertAtBeforeSet(IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+		public static void InsertAtBeforeSet(UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//a = b;のa
 			//TODO とりえあずAssignのみ +=,-=などについてはおいおい
 			var assignmentExpressions =
@@ -60,7 +60,7 @@ namespace UniAspect.Processor.Pointcut {
 			}
 		}
 
-		public static void InsertAtAfterSet(IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+		public static void InsertAtAfterSet(UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//a = b;のa
 			//TODO とりえあずAssignのみ +=,-=などについてはおいおい
 			var assignmentExpressions =
@@ -111,11 +111,11 @@ namespace UniAspect.Processor.Pointcut {
 			}
 		}
 
-		public static void InsertAtBeforeSetByName(IUnifiedElement root, string name, UnifiedBlock advice) {
+		public static void InsertAtBeforeSetByName(UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtBeforeSet(root, new Regex(name), advice);
 		}
 
-		public static void InsertAtAfterSetByName(IUnifiedElement root, string name, UnifiedBlock advice) {
+		public static void InsertAtAfterSetByName(UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtAfterSet(root, new Regex(name), advice);
 		}
 
@@ -123,15 +123,15 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "set"; }
 		}
 
-		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void Before(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtBeforeSetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void After(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtAfterSetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void Around(IUnifiedElement model) {
+		public override void Around(UnifiedElement model) {
 			throw new NotImplementedException();
 		}
 	}

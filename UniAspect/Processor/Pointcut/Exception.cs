@@ -11,7 +11,7 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "exception"; }
 		}
 		
-		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void Before(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			var exceptions = model.Descendants<UnifiedCatch>();
 			foreach (var e in exceptions) {
 				var regex = new Regex("^" + target.GetTargetName().ElementAt(1) + "$");
@@ -26,11 +26,11 @@ namespace UniAspect.Processor.Pointcut {
 			}
 		}
 
-		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void After(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			throw new NotImplementedException();
 		}
 
-		public override void Around(IUnifiedElement model) {
+		public override void Around(UnifiedElement model) {
 			throw new NotImplementedException();
 		}
 	}

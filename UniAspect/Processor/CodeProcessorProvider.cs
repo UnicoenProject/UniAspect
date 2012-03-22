@@ -36,19 +36,19 @@ namespace UniAspect.Processor {
 		}
 
 		// 指定されたポイントカット(名)に対応するbeforeの織り込み処理を与えられたmodelに適用します
-		public static void WeavingBefore(string name, IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public static void WeavingBefore(string name, UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			var aspect = GetProcessorFromName(name);
 			aspect.Before(model, target, advice);
 		}
 
 		// 指定されたポイントカット(名)に対応するafterの織り込み処理を与えられたmodelに適用します
-		public static void WeavingAfter(string name, IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public static void WeavingAfter(string name, UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			var aspect = GetProcessorFromName(name);
 			aspect.After(model, target, advice);
 		}
 
 		// 指定されたポイントカット(名)に対応するaroundの織り込み処理を与えられたmodelに適用します
-		public static void WeavingAround(string name, IUnifiedElement model) {
+		public static void WeavingAround(string name, UnifiedElement model) {
 			var aspect = GetProcessorFromName(name);
 			aspect.Around(model);
 		}

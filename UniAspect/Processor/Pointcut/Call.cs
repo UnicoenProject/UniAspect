@@ -15,7 +15,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "regex">対象関数を指定する正規表現</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeCall(
-				IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//get cass list
 			var calls = root.Descendants<UnifiedCall>().ToList();
 
@@ -47,7 +47,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "regex">対象関数を指定する正規表現</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterCall(
-				IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//get cass list
 			var calls = root.Descendants<UnifiedCall>().ToList();
 
@@ -77,7 +77,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "root">コードを追加するモデルのルートノード</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeCallAll(
-				IUnifiedElement root, UnifiedBlock advice) {
+				UnifiedElement root, UnifiedBlock advice) {
 			InsertAtBeforeCall(root, new Regex(".*"), advice);
 		}
 
@@ -87,7 +87,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "root">コードを追加するモデルのルードノード</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterCallAll(
-				IUnifiedElement root, UnifiedBlock advice) {
+				UnifiedElement root, UnifiedBlock advice) {
 			InsertAtAfterCall(root, new Regex(".*"), advice);
 		}
 
@@ -98,7 +98,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "name">対象関数の名前</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeCallByName(
-				IUnifiedElement root, string name, UnifiedBlock advice) {
+				UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtBeforeCall(root, new Regex("^" + name + "$"), advice);
 		}
 
@@ -109,7 +109,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "name">対象関数の名前</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterCallByName(
-				IUnifiedElement root, string name, UnifiedBlock advice) {
+				UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtAfterCall(root, new Regex("^" + name + "$"), advice);
 		}
 
@@ -117,15 +117,15 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "call"; }
 		}
 
-		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void Before(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtBeforeCallByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void After(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtAfterCallByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void Around(IUnifiedElement model) {
+		public override void Around(UnifiedElement model) {
 			throw new NotImplementedException();
 		}
 	}

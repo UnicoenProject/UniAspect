@@ -14,7 +14,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="root">コードを追加するモデルのルートノード</param>
 		/// <param name="regex">対象変数を指定する正規表現</param>
 		/// <param name="advice">挿入するコード断片</param>
-		public static void InsertAtBeforeGet(IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+		public static void InsertAtBeforeGet(UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//a = b;
 			//TODO とりえあずAssignのみ +=,-=などについてはおいおい
 			var assignmentExpressions =
@@ -67,7 +67,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="root">コードを追加するモデルのルートノード</param>
 		/// <param name="regex">対象変数を指定する正規表現</param>
 		/// <param name="advice">挿入するコード断片</param>
-		public static void InsertAtAfterGet(IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+		public static void InsertAtAfterGet(UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//a = b;のb
 			//TODO とりえあずAssignのみ +=,-=などについてはおいおい
 			var assignmentExpressions =
@@ -114,11 +114,11 @@ namespace UniAspect.Processor.Pointcut {
 			}
 		}
 
-		public static void InsertAtBeforeGetByName(IUnifiedElement root, string name, UnifiedBlock advice) {
+		public static void InsertAtBeforeGetByName(UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtBeforeGet(root, new Regex(name), advice);
 		}
 
-		public static void InsertAtAfterGetByName(IUnifiedElement root, string name, UnifiedBlock advice) {
+		public static void InsertAtAfterGetByName(UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtAfterGet(root, new Regex(name), advice);
 		}
 
@@ -126,15 +126,15 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "get"; }
 		}
 
-		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void Before(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtBeforeGetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void After(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtAfterGetByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void Around(IUnifiedElement model) {
+		public override void Around(UnifiedElement model) {
 			throw new NotImplementedException();
 		}
 	}

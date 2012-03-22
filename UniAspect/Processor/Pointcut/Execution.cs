@@ -15,7 +15,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "regex">対象関数を指定する正規表現</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecution(
-				IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//get function list
 			var functions = root.Descendants<UnifiedFunctionDefinition>();
 
@@ -57,7 +57,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "regex">対象関数を指定する正規表現</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterExecution(
-				IUnifiedElement root, Regex regex, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, UnifiedBlock advice) {
 			//get function list
 			var functions = root.Descendants<UnifiedFunctionDefinition>();
 
@@ -100,7 +100,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="statementNum">対象関数に含まれるstatement数の下限を指定する閾値</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecution(
-				IUnifiedElement root, Regex regex, int statementNum, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, int statementNum, UnifiedBlock advice) {
 			//関数の一覧を取得
 			var functions = root.Descendants<UnifiedFunctionDefinition>();
 
@@ -133,7 +133,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="statementNum">対象関数に含まれるstatement数の下限を指定する閾値</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterExecution(
-				IUnifiedElement root, Regex regex, int statementNum, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, int statementNum, UnifiedBlock advice) {
 			//get function list
 			var functions = root.Descendants<UnifiedFunctionDefinition>();
 
@@ -182,7 +182,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="element"></param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecution(
-				IUnifiedElement root, Regex regex, Type element, UnifiedBlock advice) {
+				UnifiedElement root, Regex regex, Type element, UnifiedBlock advice) {
 			//関数の一覧を取得
 			var functions = root.Descendants<UnifiedFunctionDefinition>();
 
@@ -216,7 +216,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "root">コードを追加するモデルのルートノード</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecutionAll(
-				IUnifiedElement root, UnifiedBlock advice) {
+				UnifiedElement root, UnifiedBlock advice) {
 			InsertAtBeforeExecution(root, new Regex(".*"), advice);
 		}
 
@@ -226,7 +226,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "root">コードを追加するモデルのルートノード</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterExecutionAll(
-				IUnifiedElement root, UnifiedBlock advice) {
+				UnifiedElement root, UnifiedBlock advice) {
 			InsertAtAfterExecution(root, new Regex(".*"), advice);
 		}
 
@@ -237,7 +237,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "name">対象関数の名前</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecutionByName(
-				IUnifiedElement root, string name, UnifiedBlock advice) {
+				UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtBeforeExecution(root, new Regex("^" + name + "$"), advice);
 		}
 
@@ -248,7 +248,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "name">対象関数の名前</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterExecutionByName(
-				IUnifiedElement root, string name, UnifiedBlock advice) {
+				UnifiedElement root, string name, UnifiedBlock advice) {
 			InsertAtAfterExecution(root, new Regex("^" + name + "$"), advice);
 		}
 
@@ -260,7 +260,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="statementNum">対象関数に含まれるstatement数の下限を指定する閾値</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecutionByName(
-				IUnifiedElement root, string name, int statementNum, UnifiedBlock advice) {
+				UnifiedElement root, string name, int statementNum, UnifiedBlock advice) {
 			InsertAtBeforeExecution(root, new Regex("^" + name + "$"), statementNum, advice);
 		}
 
@@ -272,7 +272,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="statementNum">対象関数に含まれるstatement数の下限を指定する閾値</param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtAfterExecutionByName(
-				IUnifiedElement root, string name, int statementNum, UnifiedBlock advice) {
+				UnifiedElement root, string name, int statementNum, UnifiedBlock advice) {
 			InsertAtAfterExecution(root, new Regex("^" + name + "$"), statementNum, advice);
 		}
 
@@ -284,7 +284,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name="element"></param>
 		/// <param name = "advice">挿入するコード断片</param>
 		public static void InsertAtBeforeExecutionByName(
-				IUnifiedElement root, string name, Type element, UnifiedBlock advice) {
+				UnifiedElement root, string name, Type element, UnifiedBlock advice) {
 			InsertAtBeforeExecution(root, new Regex("^" + name + "$"), element, advice);
 		}
 
@@ -292,15 +292,15 @@ namespace UniAspect.Processor.Pointcut {
 			get { return "execution"; }
 		}
 
-		public override void Before(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void Before(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtBeforeExecutionByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void After(IUnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
+		public override void After(UnifiedElement model, AspectElement.Pointcut target, UnifiedBlock advice) {
 			InsertAtAfterExecutionByName(model, target.GetTargetName().ElementAt(1), advice);
 		}
 
-		public override void Around(IUnifiedElement model) {
+		public override void Around(UnifiedElement model) {
 			throw new NotImplementedException();
 		}
 	}

@@ -12,7 +12,7 @@ namespace UniAspect.Processor.Pointcut {
 		/// <param name = "name">対象となるクラスやプログラムを指定する名前</param>
 		/// <param name = "members">挿入するメンバーのリスト</param>
 		public static void AddIntertypeDeclaration(
-				UnifiedProgram program, string name, List<IUnifiedExpression> members) {
+				UnifiedProgram program, string name, List<UnifiedExpression> members) {
 			//クラスのリストを取得(Java, C#向け)
 			var classes = program.Descendants<UnifiedClassDefinition>();
 			if (classes.Count() > 0) {
